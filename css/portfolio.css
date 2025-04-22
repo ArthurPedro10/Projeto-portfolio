@@ -1,0 +1,229 @@
+/* Reset básico de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e estilo de fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens à esquerda e direita */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Permite o posicionamento absoluto de elementos internos */
+}
+
+/* Perfil à esquerda */
+.perfil-esquerda {
+    display: flex;
+    flex-direction: column; /* Organiza a foto e os ícones em coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-right: 20px; /* Espaço entre a foto e as informações do lado direito */
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px; /* Aproxima a foto do nome */
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center; /* Alinha os ícones centralizados */
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    text-decoration: none;
+}
+
+.redes-sociais a:hover {
+    color: #ff4081; /* Cor de destaque ao passar o mouse */
+}
+
+/* Nome e título profissional */
+.perfil-direita {
+    text-align: left;
+    flex: 1; /* Faz com que a seção de nome e título ocupe o restante do espaço */
+}
+
+.info-nome-titulo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Aproxima o nome da foto */
+}
+
+.info-nome-titulo h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #bbb;
+}
+
+/* Informações de contato (extrema direita) */
+.info-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha as informações à direita */
+    text-align: right;
+    position: absolute;
+    right: 20px; /* Coloca as informações no canto direito */
+    top: 20px; /* Alinha as informações no topo */
+}
+
+.info-contato p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white; /* Cor branca para os contatos */
+}
+
+/* Menu retrátil */
+.menu-retratil {
+    display: none; /* Inicialmente oculto em telas maiores */
+}
+
+.botao-menu {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.lista-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-menu li {
+    margin-left: 20px;
+}
+
+.lista-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.lista-menu a:hover {
+    color: #ff4081;
+}
+
+/* Seções */
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-topico {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.conteudo ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.conteudo li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .info-rodape h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer .info-rodape h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #bbb;
+}
+
+footer .redes-sociais {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Alinha os ícones centralizados */
+}
+
+footer .redes-sociais a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px; /* Espaçamento entre os ícones */
+}
+
+footer .redes-sociais a:hover {
+    color: #ff4081;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil-direita {
+        margin-top: 20px;
+    }
+
+    .perfil-esquerda {
+        margin-bottom: 20px;
+    }
+
+    .info-contato {
+        text-align: center; /* Centraliza em telas pequenas */
+        padding: 0;
+        position: relative; /* Para se ajustar em dispositivos móveis */
+    }
+
+    .menu-retratil {
+        display: block; /* Menu visível em telas menores */
+        margin-top: 20px;
+    }
+
+    .lista-menu {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .lista-menu li {
+        margin: 10px 0;
+    }
+
+    .botao-menu {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+}
